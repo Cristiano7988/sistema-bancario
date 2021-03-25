@@ -6,6 +6,8 @@ import { Gerente } from "./Funcionario/Gerente.js";
 import { Diretor } from "./Funcionario/Diretor.js";
 import { SistemaAutenticacao } from "./SistemaAutenticacao.js";
 
+const cliente = new Cliente("Lais", 7894561234, "456");
+
 // Instancia funcionarios
 const diretor = new Diretor("Rodrigo", 10000, 1234567890);
 const gerente = new Gerente("Ricardo", 5000, 1234567891);
