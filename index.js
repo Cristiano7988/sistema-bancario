@@ -2,6 +2,20 @@ import { Cliente } from "./Cliente.js";
 import { ContaCorrente } from "./Conta/ContaCorrente.js";
 import { ContaPoupanca } from "./Conta/ContaPoupança.js";
 import { ContaSalario } from "./Conta/ContaSalario.js";
+import { Gerente } from "./Funcionario/Gerente.js";
+import { Diretor } from "./Funcionario/Diretor.js";
+import { SistemaAutenticacao } from "./SistemaAutenticacao.js";
+
+// Instancia funcionarios
+const diretor = new Diretor("Rodrigo", 10000, 1234567890);
+const gerente = new Gerente("Ricardo", 5000, 1234567891);
+
+// Ssitema de Autenticação utilizando Polimorfismo
+diretor.cadastrarSenha("123456789");
+const estaLogado = SistemaAutenticacao.login(diretor, "123456789");
+
+// Verifica login
+console.log(estaLogado);
 
 // Instancia cliente e conta
 const cliente1 = new Cliente("Nome", 1111111111);
